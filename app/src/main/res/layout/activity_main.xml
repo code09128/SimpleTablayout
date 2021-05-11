@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.MainActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/t_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/myTabStyle"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="5dp"
+        tools:ignore="MissingConstraints"/>
+
+    <FrameLayout
+        android:id="@+id/f_Container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/b_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t_tab" />
+
+    <Button
+        android:id="@+id/b_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Switch to tab2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_Container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
